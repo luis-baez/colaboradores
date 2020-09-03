@@ -5,11 +5,13 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.colaboradores.R;
+import com.example.colaboradores.colaborators.Colaborators;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements MainCallback {
 
     @OnClick(R.id.btn_view_colaborators)
     public void viewColaboratorsClick(){
-
+        startActivity(new Intent(this, Colaborators.class));
     }
 
     @OnClick(R.id.btn_add_colaborator)
