@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Colaboradores</string>
+
+
+    <string name="item_menu">Mapa</string>
+
+    <string name="google_maps_key">AIzaSyBJZR0aqwVnsIrNGqd9jT-RclVBPDBiUQ0</string>
+    <string name="title_activity_maps_colaborator">Map</string>
+    <string name="name">Nombre</string>
+    <string name="email">Correo</string>
 </resources>

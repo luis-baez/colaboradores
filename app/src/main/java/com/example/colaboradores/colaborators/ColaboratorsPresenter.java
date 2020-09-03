@@ -27,7 +27,7 @@ public class ColaboratorsPresenter {
             Gson gson = new Gson();
             ColaboratorsData colaboratorsData = gson.fromJson(data, ColaboratorsData.class);
 
-            colaboratorsCallback.onLoadedInformation(colaboratorsData.getData().getEmployees());
+            colaboratorsCallback.onLoadedInformation(colaboratorsData.getData().getColaborators());
 
         }catch (Exception e){
             e.printStackTrace();

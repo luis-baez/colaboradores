@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.colaboradores.R;
+import com.example.colaboradores.colaborators.AddColaborator;
 import com.example.colaboradores.colaborators.Colaborators;
 
 import butterknife.ButterKnife;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements MainCallback {
 
     @OnClick(R.id.btn_add_colaborator)
     public void addColaboratorClick(){
-
+        startActivity(new Intent(this, AddColaborator.class));
     }
 
     @Override

@@ -1,9 +1,14 @@
 package com.example.colaboradores.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Colaborator {
+import java.io.Serializable;
+
+public class Colaborator implements Parcelable {
 
     @SerializedName("id")
     @Expose
@@ -17,6 +22,28 @@ public class Colaborator {
     @SerializedName("mail")
     @Expose
     private String mail;
+
+    public Colaborator(Parcel in) {
+        id = in.readString();
+        name = in.readString();
+        mail = in.readString();
+    }
+
+    public static final Creator<Colaborator> CREATOR = new Creator<Colaborator>() {
+        @Override
+        public Colaborator createFromParcel(Parcel in) {
+            return new Colaborator(in);
+        }
+
+        @Override
+        public Colaborator[] newArray(int size) {
+            return new Colaborator[size];
+        }
+    };
+
+    public Colaborator() {
+
+    }
 
     public String getId() {
         return id;
@@ -48,5 +75,17 @@ public class Colaborator {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(name);
+        dest.writeString(mail);
     }
 }

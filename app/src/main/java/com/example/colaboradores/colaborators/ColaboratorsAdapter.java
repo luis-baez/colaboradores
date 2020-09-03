@@ -94,19 +94,13 @@ public class ColaboratorsAdapter extends RecyclerView.Adapter<ColaboratorsAdapte
             ButterKnife.bind(this, itemView);
             crvColaborator.setOnClickListener(onColaboratorClickListener);
 
-            //btnProgrammedPayment.setOnClickListener(this);
 
         }
 
 
         @Override
         public void onClick(View view) {
-            switch (view.getId()){
-//                case R.id.btnProgrammedPayment:
-//                    colaboratorsCallback.programmedPayment(getValuation());
-//                    break;
 
-            }
         }
     }
 }

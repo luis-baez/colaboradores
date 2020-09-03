@@ -98,10 +98,6 @@ public class MainPresenter {
 
     public static boolean writeResponseBodyToDisk(ResponseBody body) {
         try {
-            // todo change the file location/name according to your needs
-           // File folder = new File(Constants.FILE_PATH);
-//            if(!folder.exists())
-//                folder.mkdir();
 
             File folder = new File(Environment.getExternalStorageDirectory(), "colaborators");
             if(!folder.exists())
